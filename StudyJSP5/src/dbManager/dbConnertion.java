@@ -22,7 +22,7 @@ public class dbConnertion {
 		Connection  con = null;
 		
 		//디비연결
-		//1단계 드라이버 불러오기
+		//1단계 드라이버 불러오기ddd
 		//: com폴더 mysql폴더 jdbc폴더 Driver.class
 		Class.forName("com.mysql.jdbc.Driver");
 
