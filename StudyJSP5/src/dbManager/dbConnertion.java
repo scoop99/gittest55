@@ -35,7 +35,7 @@ public class dbConnertion {
 		return con;
 		*/
 		
-		// context.xml 불러오기 위한 자바파일 객체생
+		// context.xml 불러오기 위한 자바파일 객체생13123123
 		Context init = new InitialContext();
 		DataSource ds=(DataSource)init.lookup("java:comp/env/jdbc/MysqlDB"); //위치/이름
 		Connection con=ds.getConnection();
