@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+웹브라우저 내장객체
+window 
+	- location
+	- history
+	- document
+		- image, link, layer
+		- from
+			- text, password, textarea
+			- checkbox, radiobox
+			- select - option
+			
+	document : 웹브라우저에서 html head body 내장객체
+	document.속성
+		document.title, document.bgColor, document.fgColor, document.linkColor
+	document.메서드()
+		document.open(), document.close(), document.write(), document.writeln()
+		
+	
+		
+		
+	document.fr.sel.속성
+	document.fr.sel.options[0].메서드()
+	
+						
+*/
+
+
+	function fun1(){
+		alert("목록개수 : " + document.fr.sel.length);
+		alert("목록상자이름 : "+document.fr.sel.name);
+		alert("목록상자타입"+document.fr.sel.type);
+		alert("선택한 목록의 인덱스 번호 : "+document.fr.sel.selectedIndex);
+		
+		//메서드
+		document.fr.sel.focus();
+		document.fr.sel.blur();
+		//document.fr.sel.options[0].속성
+		alert("첫번째 옵션의 화면에 보여주는 글자 : "+document.fr.sel.options[0].text);
+		alert("첫번째 옵션의 value값 : " + document.fr.sel.options[0].value)
+		//선택이 되면 true 선택이 되지 않으면 false
+		alert("첫번째옵션 선택여부 : "+ document.fr.sel.options[0].selected);
+		
+	};
+	function fun2(){
+		//첫번째 목록이 선택되어 있으면, 메세지 " 목록을 선택하세요"
+		
+		/* if(document.fr.sel.selectedIndex == 0 ){
+			alert("목록을 선택하세요");
+			document.fr.sel.focus();
+			return false;
+		} */
+		
+		/* if(document.fr.sel.options[0].selected){
+			alert("목록을 선택하세요");
+			document.fr.sel.focus();
+			return false;
+		}
+		 */
+		 
+		if(document.fr.sel.options[document.fr.sel.selectedIndex].value==""){
+			alert("목록을 선택하세요");
+			document.fr.sel.focus();
+			return false;
+		}
+		/* if(document.fr.sel.options[document.fr.sel.selectedIndex].text=="선택하세요"){
+			alert("목록을 선택하세요");
+			document.fr.sel.focus();
+			return false;
+		} */
+		
+		
+		
+		var aa=document.fr;
+		aa.submit();
+		//document.fr.submit();
+			
+	};
+	
+	function fun3() {
+		if(document.fr.sel.options[document.fr.sel.selectedIndex].value==""){
+			alert("목록을 선택하세요");
+			document.fr.sel.focus();
+			return false;
+		}
+		return true;
+		
+		
+	}
+	
+	function fun99(){
+		//내가 선택한거 찾기
+		/*
+		var ssl = document.fr.sel;
+	 	var mgs =""; 
+		
+		for(var i=0;i<ssl.length;i++){
+			//alert(i);
+			
+			if(ssl.options[i].selected){
+				mgs = ssl.options[i].value;
+			}
+		}
+		alert(mgs); 
+		*/
+		inputVal="2";
+		
+		alert(document.getElementById("sel").options);
+		for(var i = 0; i < document.getElementById("sel").options.length; i++)
+		{
+		  if(inputVal ==  document.getElementById("sel").options[i].value)
+		  {
+		    document.getElementById("sel").options[i].selected = true;
+		  }
+		}
+		//$("#sel").val(inputVal); //j쿼리는 한줄
+		
+		//document.fr.sel.options[document.fr.sel.selectedIndex].value="3";
+		alert(document.fr.sel.options[document.fr.sel.selectedIndex].value);
+		
+		
+	}
+	
+	
+</script>
+</head>
+<body>
+<h1>webContent/js2/test9.html</h1>
+<form action="a.jsp" name="fr" method="get" onsubmit="return fun3();">
+	<select name="sel" id="sel">
+		<option value="">선택하세요</option>
+		<option value="1">목록1</option>
+		<option value="2">목록2</option>
+		<option value="3" selected="selected">목록3</option>
+	</select>
+	<input type="button" value="목록상자속성" onclick="fun1();">
+	<input type="button" value="목록상자제어" onclick="fun2();">
+	<input type="button" value="목록상자선택" onclick="fun99();">
+	<input type="submit" value="submit 전송">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

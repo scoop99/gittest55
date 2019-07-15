@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+ 	$(document).ready(function(){
+ 		//대상.show() .hide() .toggle()
+ 		//    .slideDown() .slideUp() .slideToggle()
+ 		//    .fadeIn()
+ 		
+ 		//이벤트 h2태그 클릭했을때 효과
+ 		//클릭한 다음 태그 .next()에 .toggle()
+ 		$("h2").click(function () {
+ 			
+ 			console.log($(this).next());
+			$(this).next().toggle("slow",function(){
+				alert("효과끝");
+			});
+		});
+ 		
+ 	});
+ </script>
+ 
+</head>
+<body>
+<h1>webContent/js3_jQuery1/test10.html</h1>
+<h2>열고 닫기1</h2>
+<div>
+<h2>제목1</h2>
+<p>내용1</p>
+</div>
+
+<h2>열고 닫기2</h2>
+<div>
+<h2>제목2</h2>
+<p>내용2</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+ 	$(document).ready(function(){
+	 	//대상.bind('이벤트종류',function(){})
+	 	//대상.click(function(){})
+	
+	 	/* //h2를 클릭햇을때 h2 클릭 이벤트 발생 - > 실행
+	 	$("h2").bind("click",function(){
+	 		alert("클릭이벤트");
+	 	}); */
+	 	
+	 	$("h2").click(function(){
+	 		alert("클릭이벤트2");
+	 		//console.log("a");
+	 		//이벤트 한번만 수행
+	 		$(this).unbind();
+	 	});
+	 	
+	 	//h3 클릭했을때 내용 바꾸기 click() / html()
+	 	$("h3").click(function(){
+	 		//$(this).html("바뀌나?");
+	 		//h3태그 안에 내용을 유지하면서 *한개 추가 -> 덮어서 출력 
+	 		$(this).html(function(i,j){
+	 			console.log(i+" "+j);
+	 			return j+"*";
+	 		})
+	 	});
+	 	//이미지 mouseover() mouseout()
+	 	$("img").mouseover(function(){
+	 		//alert("a");
+	 		$(this).attr("src","../js2/2.jpg");
+	 		//console.log($(this));
+	 	});
+	 	$("img").mouseout(function(){
+	 		$(this).attr("src","../js2/1.jpg");
+	 		//console.log($(this));
+	 	});
+	 	$("img").mouseover(function(){
+	 		//alert("a");
+	 		$(this).attr("src","../js2/2.jpg");
+	 		//console.log($(this));
+	 	}).mouseout(function(){
+	 		$(this).attr("src","../js2/1.jpg");
+	 		//console.log($(this));
+	 	});
+	 	
+	 	
+		
+		
+		//$("#txt").val("bbbbbb");
+ 	
+ 		
+ 	});
+ 	
+ 	
+ </script>
+</head>
+<body>
+
+<h1>webContent/js3_jQuery1/test8.html</h1>
+
+<img src="../js2/1.jpg">
+
+<h3>h3-0</h3>
+<h3>h3-1</h3>
+<h3>h3-2</h3>
+
+
+<h2>head-0</h2>
+<h2>head-1</h2>
+<h2>head-2</h2>
+<form>
+<input type="text" value="aaaaaa" id="txt">
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

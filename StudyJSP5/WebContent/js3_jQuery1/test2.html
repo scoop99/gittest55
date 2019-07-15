@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//대상.함수()
+		//$('*').css('color','red');
+		//h1태그를 대상으로 파랑색으로 변경
+		$('h1').css('color','blue');
+		
+		//id값이 h2인것은 그린
+		$('#na').css('color','green');
+		
+		//class 값이 ca인것은 노랑
+		$('.ca').css('color','yellow');
+		$('input[type=text]').css('color','red');
+		$('input[type=password]').css('color','yellow');
+		
+		$('h1[name=name1]').css('color','red');
+		//태그 :odd 태그 : even 태그:first 태그:last
+		
+		//홀수
+		$('tr:even').css('background','red');
+		
+		
+		
+		//짝수		
+		$('tr:odd').css('background','pink');
+		
+		
+		//처음
+		//$('tr:first').css('background','blue');
+		
+		//마지막
+		//$('tr:last').css('background','green');
+		
+		
+		//$('#a').css('background','yellow');
+		
+		
+	});
+</script>
+</head>
+<body>
+<h1>webContent/js3_jQuery1/test2.html</h1>
+<h1 id="na">제목1</h1>
+<h1 class="ca">제목2</h1>
+<h1 name="name1">제목3</h1>
+텍스트 <input type="text">
+비밀번호 <input type="password">
+
+
+<table >
+	<tr>
+		<td>번호</td>
+		<td>제목</td>
+		<td>작성자</td>
+	</tr>
+	
+	<tr>
+		<td>1</td>
+		<td>제목1</td>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>제목2</td>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>제목3</td>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>제목4</td>
+		<td>홍길동</td>
+	</tr>
+</table>
+
+<br>
+<table>
+	<tr>
+		<td>번호</td>
+		<td>제목</td>
+		<td>작성자</td>
+	</tr>
+	
+	<tr>
+		<td>1</td>
+		<td>제목1</td>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>제목2</td>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>제목3</td>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>제목4</td>
+		<td>홍길동</td>
+	</tr>
+</table>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

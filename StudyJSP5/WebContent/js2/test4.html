@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+웹브라우저 내장객체
+window 
+	- location
+	- history
+	- document
+		- image, link, layer
+		- from
+			- text, password, textarea
+			- checkbox, radiobox
+			- select - option
+			
+	document : 웹브라우저에서 html head body 내장객체
+	document.속성
+		document.title, document.bgColor, document.fgColor, document.linkColor
+	document.메서드()
+		document.open(), document.close(), document.write(), document.writeln()
+		
+	 
+					
+*/
+	function fun1(){
+		alert(document.title);
+		alert(document.bgColor);
+	}
+	
+	function fun2(){
+		
+		//alert(document.getElementById("co").value);
+		document.bgColor = "pink";
+	}
+	
+	
+	function fun3(Color) {
+		
+		
+		alert(Color);
+		document.bgColor = Color;
+		
+		/*
+		if(Color=="green")
+		{
+			document.bgColor = "green";
+		}
+		else if(Color=="blue")
+		{
+			document.bgColor = "blue";
+		}
+		else if(Color=="red")
+		{
+			document.bgColor = "red";
+		}
+		*/
+	}
+	
+	
+	function fun99() {
+		var Colors = document.getElementsByName('radColor');
+		
+		//alert(Colors[0]);
+		
+		//var Color_value; // 여기에 선택된 radio 버튼의 값이 담기게 된다.
+		for(var i=0; i<Colors.length; i++) {
+			//선택된걸로 색갈변경
+		    if(Colors[i].checked) {
+		        //Color_value = Colors[i].value;
+		    	document.bgColor=Colors[i].value;
+		    }
+		}
+	}
+	
+	
+	
+	function fun100(){
+		document.bgColor=document.getElementById("co").value;
+	}
+	
+	
+	
+</script>
+</head>
+<body bgcolor="yellow">
+	<h1>webContent/js2/test4.html</h1>
+	<input type="button" value="html문서속성" onclick="fun1();">
+	
+	<input type="button" value="배경색변경" onclick="fun2();">
+	
+	<input type="color" id="co">
+	<input type="button" value="선택된것으로 배경색 변경" onclick="fun100();">
+	
+	<br>
+	<input type="radio" name="radColor" value="green" onclick="fun3('green');">green<br>
+	<input type="radio" name="radColor" value="blue" onclick="fun3('blue');">blue<br>
+	<input type="radio" name="radColor" value="red" onclick="fun3('red');">red<br>
+	
+	<br>
+	
+	
+	<input type="radio" name="radColor" value="green" onclick="fun99();">green<br>
+	<input type="radio" name="radColor" value="blue" onclick="fun99();">blue<br>
+	<input type="radio" name="radColor" value="red" onclick="fun99();">red<br>
+	
+	
+	
+</body>
+</html>

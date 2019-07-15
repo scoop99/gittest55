@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+	웹 브라우저 내장객체
+	window  
+		- location
+		- history
+		- document
+			- image,link,layer
+			- form 
+				- text,password, textarea
+				- checkbox, radiobox
+				- selecct - option
+	*/
+	
+	/*
+		window.변수(속성,특징)
+		window.status	window.opener
+		window.함수() (메서드,기능)
+		window.open()	window.close()
+	*/
+	
+	function fun1() {
+		//window.open('창을 열었을때 보여질 문서, 주소','창이름','창크기,위치,');
+		window.open("http://naver.com","naver","width=300,height=200");
+	}
+	
+	function fun2() {
+		window.open("file:///D:/workspace_jsp5/StudyJSP5/WebContent/js2/test1_1.html","그런거냐?","width=200,height=100,scrollbars=no,resizable=yes");
+	}
+	
+	function fu3() {
+		window.close();
+	}
+	
+</script>
+</head>
+<body>
+	<h1>WebContent/js2/test1.html</h1>
+	<input type="button" value="창열기" onclick="fun1();">
+	<input type="button" value="창열기2" onclick="fun2();">
+	
+	<input type="button" value="창닫기" onclick="fun3();">
+	
+</body>
+</html>

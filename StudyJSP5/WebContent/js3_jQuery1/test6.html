@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		//대상.append() //대상 태그에 뒷부분에 추가
+		$("body").append("<h2>append 추가</h2>");
+		
+		$("div").append(" 오예~");
+		
+		$("div").append(function(i){
+			return "추가-"+i;
+		});
+		//p태그 뒷부분에 이미지 첫번째를 추가 $("img").first();
+		//console.log($("img").first());
+		//setInterval 시간 간격마다 동작
+		setInterval(function() {
+			$("p").append($("img").first());	
+		}, 2000);
+		
+		
+		
+		
+	}
+	
+	
+	);
+</script>
+</head>
+<body>
+<h1>webContent/js3_jQuery1/test6.html</h1>
+<p>
+<img src="../js2/1.jpg" width="200">
+<img src="../js2/2.jpg" width="200">
+<img src="../js2/3.jpg" width="200">
+<img src="../js2/4.jpg" width="200">
+<img src="../js2/5.jpg" width="200">
+</p>
+<div>div-0</div>
+<div>div-1</div>
+<div>div-2</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+ 	$(document).ready(function(){
+ 		//form대상 submit() 이벤트
+ 		//메세지 출력 아이디대상.val(), 비밀번호대상.val()
+ 		$("#my_fr").submit(function(){
+ 			/* alert($("#my_id").val());
+ 			alert($("#my_pass").val()); */
+ 			var id=$("#my_id").val();
+ 			var psss=$("#my_pass").val();
+ 			
+ 			if(id==""){
+ 				alert("아이디 입력");
+ 				$("#my_id").focus();
+ 				return false;
+ 			}
+ 			if(psss==""){
+ 				alert("비밀번호 입력");
+ 				$("#my_pass").focus();
+ 				return false;
+ 			}
+ 			
+ 			//전송
+ 		});
+ 		
+ 		
+ 	})
+</script>
+</head>
+<body>
+<h1>webContent/js3_jQuery1/test9.html</h1>
+<form action="a.jsp" method="post" name="fr" id="my_fr">
+아이디 : <input type="text" name="id" id="my_id"> 
+비밀번호 : <input type="password" name="pass" id="my_pass">
+<input type="submit" value="로그인">
+
+</form>
+</body>
+</html>

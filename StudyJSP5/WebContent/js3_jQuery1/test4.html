@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+	//대상.속성()
+	$(document).ready(function(){
+		console.log($('img'));
+		//대상.attr()
+		console.log($('img').attr('width'));
+		
+		/* var w = $('img').attr('width');
+		w=100; */
+		
+		//$("img").attr("src","../js2/4.jpg");
+		//$("img").attr("width","300");
+		
+		$("img").attr("width",function(i){
+			//return (++i)*100; 
+			return (i+1)*100;
+		});
+		
+		//img 태그 대상에 width속성 400 변경 heigth속성 300
+		$("img").attr({
+			width:400
+			,height: 300
+		})
+		
+		//img태그 대상에 width속성 첫번째 300 두번째 400 세번째 500 변경
+		//img태그 대상에 heigth속성 첫번째 100 두번째 200 세번째 300 변경
+		$("img").attr({
+			width : function(i){
+				//return ((i+1)*100)+200;	
+				return (i+3)*100;
+			}
+			, height: function(i){
+				return (i+1)*100;
+			}
+		});
+		
+		
+		
+		
+		//$("img").attr("width","300");"
+			
+	});
+</script>
+
+</head>
+<body>
+<h1>webContent/js3_jQuery1/test4.html</h1>
+<img src="../js2/1.jpg" width="200">
+<img src="../js2/2.jpg" width="200">
+<img src="../js2/3.jpg" width="200">
+
+</body>
+</html>

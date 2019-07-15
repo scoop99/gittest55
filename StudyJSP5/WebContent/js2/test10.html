@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+웹브라우저 내장객체
+window 
+	- location
+	- history
+	- document
+		- image, link, layer
+		- from
+			- text, password, textarea
+			- checkbox, radiobox
+			- select - option
+			
+	document : 웹브라우저에서 html head body 내장객체
+	document.속성
+		document.title, document.bgColor, document.fgColor, document.linkColor
+	document.메서드()
+		document.open(), document.close(), document.write(), document.writeln()
+		
+	 
+					
+*/
+
+
+	function check1(){
+		
+		if(document.getElementById("idd").value==""){
+			alert("아이디를 입력하세요");
+			return false;
+		}
+		
+		//아이디
+		/* if(document.fr.id.value==""){
+			alert("아이디를 입력하세요");
+			return false;
+		} */
+		//비밀번호
+		
+
+		if(document.getElementById("pas").value==""){
+			alert("비밀번호입력 입력하세요");
+			return false;
+		}
+		
+		
+		/* if(document.fr.pass.value==""){
+			alert("비밀번호입력");
+			return false;
+		} */
+		
+		//자기소개
+		if(document.fr.intro.value==""){
+			alert("자기소개 입력");
+			return false;
+		}
+		
+		
+		//성별
+		/* if(!document.fr.gen[0].checked && !document.fr.gen[1].checked){
+			alert("성별을 선택");
+			return false;
+		} */
+		var obj = document.fr.gen;
+		var checked = false;
+		
+		for(var i=0;i<obj.length;i++){
+			if(obj[i].checked){
+				checked = true;
+				break;
+			}
+		}
+		if(!checked){
+			alert("성별을 선택");
+			return false;
+		}
+		
+		
+		//취미
+		/* if(!document.fr.hob[0].checked && !document.fr.hob[1].checked&& !document.fr.hob[2].checked){
+			alert("취미 선택");
+			return false;
+		} */
+		
+		obj = document.fr.hob;
+		checked = false;
+		
+		for(var i=0;i<obj.length;i++){
+			if(obj[i].checked){
+				checked = true;
+				break;
+			}
+		}
+		if(!checked){
+			alert("취미 선택");
+			return false;
+		}
+		
+		//학년
+		if(document.fr.har.selectedIndex==0){
+			alert("학년 선택");
+			return false;
+		}
+		
+		document.fr.submit();
+		
+	}
+	
+	function check2(){
+		//아이디
+		if(document.fr.id.value==""){
+			alert("아이디를 입력하세요");
+			return false;
+		}
+		//비밀번호
+		if(document.fr.pass.value==""){
+			alert("비밀번호입력");
+			return false;
+		}
+		
+		//자기소개
+		if(document.fr.intro.value==""){
+			alert("자기소개 입력");
+			return false;
+		}
+		//성별
+		if(!document.fr.gen[0].checked && !document.fr.gen[1].checked){
+			alert("성별을 선택");
+			return false;
+		}
+		//취미
+		if(!document.fr.hob[0].checked && !document.fr.hob[1].checked&& !document.fr.hob[2].checked){
+			alert("취미 선택");
+			return false;
+		}
+		//학년
+		if(document.fr.har.selectedIndex==0){
+			alert("학년 선택");
+			return false;
+		}
+		
+		return true;
+		
+	}
+
+
+</script>
+</head>
+<body>
+<h1>webContent/js2/test10.html</h1>
+<form action="b.jsp" name="fr" method="get" onsubmit="return check2();">
+	아이디 : <input type="text" name="id" id="idd" > <br>
+	비밀번호 : <input type="password" name="pass" id="pas" ><br>
+	자기소개 : <textarea name="intro" rows="10" cols="20"></textarea><br>
+	성별 : <input type="radio" name="gen" value="남">남자
+			<input type="radio" name="gen" value="여">여자
+		<br>
+	취미 : <input type="checkbox" name="hob" value="여행">여행
+			<input type="checkbox" name="hob" value="독서">독서
+			<input type="checkbox" name="hob" value="게임">게임
+			<br>
+			
+	학년 : 
+		<select name="har">
+			<option value="">학년을선택하세요</option>
+			<option value="1">1학년</option>
+			<option value="2">2학년</option>
+			<option value="3">3학년</option>
+		</select> 
+	<input type="button" value="button 전송" onclick="check1();">
+	<input type="submit" value="submit 전송">
+	<input type="reset" value="초기화">
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

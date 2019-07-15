@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		window 생략가능
+		window.location.속성(변수,특징)
+		window.location.메서드(함수,기능)
+		
+		location.href URL주소 저장되어 있는 변수, 하이퍼링크
+		location.protocol 프로토콜저장되어 있는 변수
+		location.hostname 서버주소
+		location.prot 포트번호
+		location.host 서버주소+포트번호
+		
+		location.reload() 새로고침
+		location.replace() 새로운 문서를 불러옴
+	*/
+	
+	
+	function fun1() {
+		alert("URL주소 : " + location.href);
+		alert("프로토콜 : " + location.protocol);
+		
+	}
+	
+	function fun2() {
+		location.href = "test1.html";
+		
+		//location.re
+		
+	}
+	
+	function fun3() {
+		//새로고침
+		//location.reload();
+		
+		//새로운 문서 불러오기
+		location.replace("test1.html")
+		
+	}
+
+</script>
+</head>
+<body>
+<h1>WebContent/js2/test2.html</h1>
+
+	<input type="button" value="현페이지주소정보" onclick="fun1();">
+	
+	<input type="button" value="test1.html페이지로 이동" onclick="fun2();">
+	<input type="button" value="새로운 문서 불러 오기" onclick="fun3();">
+</body>
+</html>

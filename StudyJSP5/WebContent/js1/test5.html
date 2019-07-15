@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//내장함수
+//alert("내장함수");
+/* function alert(a) {
+	//메시지 창 만들고
+	//a변수안에 있는 애용을 출력
+	return;
+}; */
+
+//var msg = prompt("입력하세요,","입력하는곳");
+
+//alert(msg);
+//function prompt(a,b) {
+	//메시지 창 만들고
+	//입력할수 있는 텍스트 상자 만들고
+	//msg = 값을 입력하면
+	//return msg;
+	
+//}
+
+
+function fu1() {
+	var a= parseInt(prompt("1번",""));
+	var b= parseInt(prompt("2번",""));
+	
+	alert(a+b);
+	alert(a-b);
+	alert(a*b); 
+	alert(a/b);
+	
+};
+
+/* var c=confirm("확인취소를 눌러주세요")
+//alert(c);
+
+if(c)
+	{
+		alert("확인을 누름");
+	}
+else
+	{
+		alert("취소");
+	} */
+	function fu2() {
+		
+		var c=confirm("회원가입하려면 확인 단추를 누르세요")
+		
+		if(c)
+			{
+				alert("가입해주셔서 감사 합니다.");
+			}
+		else
+			{
+				alert("다음 기회에 다시 뵙겠습니다.");
+			};
+	};
+	
+//isNaN(값) : is Not a Number 문자이면 true / 숫자(문자숫자)이면 false)
+/* 
+var pp = prompt("문자혹은 숫자를 입력하시면 무엇을 입력 했는지 알려 드릴께요");
+//alert(pp);
+//alert(isNaN(pp));
+if(pp!="")
+	{
+		alert("값을 입력하세요");
+	}
+else
+	{
+		if(isNaN(pp))
+			{
+				alert("문자입니다.");
+			}
+		else
+			{
+				alert("숫자 이네요~");
+			}
+	}
+ */	
+	
+	function fu3() {
+	 var a = prompt("문자혹은 숫자를 입력하시면 무엇을 입력 했는지 알려 드릴께요");
+	 
+	 if(a=="")
+		 {
+		 	alert("값을 입력하세요");
+		 }
+	 else
+		 {
+		 	if(isNaN(a))
+		 		{
+		 			alert("문자:"+a +"를 입력 했습니다.");
+		 		}
+		 	else
+		 		{
+		 			alert("숫자:"+a +"를 입력 했습니다.");
+		 			//alert("100을 더해볼께요 " + (parseInt(a)+100));
+		 			alert("100을 더해볼께요 " + (parseFloat(a)+100));
+		 		}
+		 }
+		
+	}
+	
+
+
+
+</script>
+</head>
+<body>
+	<h1>WebContent/js1/test5.html</h1>
+	
+	<input type="button" value="사칙연산" onclick="fu1();">
+	<input type="button" value="회원가입" onclick="fu2()">
+	<input type="button" value="입력값 판별" onclick="fu3();">
+	
+	
+	
+	
+</body>
+</html>

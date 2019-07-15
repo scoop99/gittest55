@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.high0{ background-color: yellow; }
+	.high1{ background-color: orange; }
+	.high2{ background-color: blue; }
+	.high3{ background-color: green; }
+	.high4{ background-color: red; }
+</style>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+ 	$(document).ready(function(){
+ 		//$("태그").each(); 태그대상 반복
+ 		//$.each(배열변수.function(){}) //배열변수 대상 반복)
+ 		
+ 	 
+ 		$("h2").each(function(i){
+ 			//alert(i);
+ 			//대상.addClass();
+ 			$(this).addClass("high"+i);
+ 			//$(this).html("aaaa"+i);
+ 			
+ 		});
+ 		//배열 선언
+ 		var arr=[
+ 			{name:'naver',link:'http://www.naver.com'}
+ 			,{name:'daum',link:'http://www.daum.net'}
+ 			,{name:'jquery',link:'http://www.jquery.com'}
+ 		];
+ 		
+ 		$.each(arr,function(i,j){
+ 			//console.log(i);
+ 			//console.log(j);
+ 			//body뒤에 추가
+ 			$("body").append(j.name + "," + j.link+"<br>");
+ 			
+ 			$("body").append("<a href="+j.link+">"+j.name+"</a><br>" );
+ 			
+ 			$("table").append("<tr><td>"+j.name+"</td><td>"+j.link+"</td></tr>")
+ 			
+ 			
+ 		});
+ 		
+ 		
+ 	});
+</script>
+</head>
+<body>
+<h1>webContent/js3_jQuery1/test7.html</h1>
+<table border="1">
+<tr><td>이름</td><td>주소</td></tr>
+</table>
+<h2>item-0</h2>
+<h2>item-1</h2>
+<h2>item-2</h2>
+<h2>item-3</h2>
+<h2>item-4</h2>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

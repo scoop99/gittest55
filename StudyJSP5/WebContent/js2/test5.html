@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+웹브라우저 내장객체
+window 
+	- location
+	- history
+	- document
+		- image, link, layer
+		- from
+			- text, password, textarea
+			- checkbox, radiobox
+			- select - option
+			
+	document : 웹브라우저에서 html head body 내장객체
+	document.속성
+		document.title, document.bgColor, document.fgColor, document.linkColor
+	document.메서드()
+		document.open(), document.close(), document.write(), document.writeln()
+		
+	 
+					
+*/
+	function fun1() {
+		alert("이미지클릭")
+		//window.document.문서안 첫번째이미지.속성
+		//window.document.images[0].속성
+		//window.document.images[0].메서드()
+		//window.document.images[0]
+		
+		//window.document.이미지이름.속성
+		//window.document.im0.속성
+		//window.document.im0.메서드();
+		//window.document.im0.속성
+		
+		alert(window.document.images[0].src);
+		alert(window.document.images[0].name);
+		alert(window.document.images[0].width);
+		alert(window.document.images[0].height);
+		alert(window.document.images[0].border);
+	}
+	
+	function fun2() {
+		
+		document.images[0].width = 500;
+		document.images[0].src="2.jpg";
+		//window.document.im0.width = 500;
+		
+	}
+	
+	function fun3() {
+		document.images[1].src="3.jpg"
+		document.images[1].border=5;
+	}
+	
+	function fun4() {
+		document.im2.src="5.jpg";//
+	}
+	
+	function fun5() {
+		document.im2.src="4.jpg";//
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+<h1>webContent/js2/test5.html</h1>
+<img src="1.jpg" name="im0" width="300" height="200" border="1" onclick="fun1();" >
+<img src="2.jpg" name="im1" width="300" height="200" border="1" onclick="fun3();" >
+<img src="4.jpg" name="im2" onmouseover="fun4();" onmouseout="fun5();">
+<br>
+<input type="button" value="이미지변경" onclick="fun2();" >
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

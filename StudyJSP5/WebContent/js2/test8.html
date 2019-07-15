@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+웹브라우저 내장객체
+window 
+	- location
+	- history
+	- document
+		- image, link, layer
+		- from
+			- text, password, textarea
+			- checkbox, radiobox
+			- select - option
+			
+	document : 웹브라우저에서 html head body 내장객체
+	document.속성
+		document.title, document.bgColor, document.fgColor, document.linkColor
+	document.메서드()
+		document.open(), document.close(), document.write(), document.writeln()
+		
+	
+	document.fr.ra[0].속성
+	document.fr.ra[0].메서드()
+	
+						
+*/
+
+
+
+	function fun1(){
+		/* 
+		//속성
+		alert(document.fr.ra[0].type);
+		alert(document.fr.ra[0].name);
+		alert(document.fr.ra[0].value);
+		//체크가 되어 있으면 true / 안되어 있으면 false
+		alert(document.fr.ra[0].checked);
+		 */
+		//메서드
+		document.fr.ra[0].focus(); //점선
+		document.fr.ra[0].blur(); //해제
+		document.fr.ra[0].click(); //클릭 선택
+	}
+	
+	function fun2() {
+		/* alert("첫번째 : " + document.fr.ra[0].checked);
+		alert("두번째 : " + document.fr.ra[1].checked);
+		
+		//두개의 라디오 박스 모두 선택이 안되어 있으면 메세지 "라디오박스선택하세요" 하고 첫번째 라디오박스 포커스
+		
+		if(document.fr.ra[0].checked == false && document.fr.ra[1].checked == false){
+			alert("라디오박스선택하세요");
+			document.fr.ra[0].focus();
+			return false;
+		}
+		
+		
+		*/
+		
+		
+		/* 
+		var Allra = document.fr.ra;
+		var b=false;
+		
+		for(var i=0;i<Allra.length;i++){
+			//alert(i);
+			if(Allra[i].checked==true){
+				b=true;
+				break;
+			}
+		}
+		
+		if(!b){
+			alert("라디오박스선택하세요");
+			Allra[0].focus();
+			return false;
+			
+		} 
+		*/
+		
+		//체크박스
+		/* 
+			if(document.fr.ch[0].checked==false && document.fr.ch[1].checked==false && document.fr.ch[2].checked==false){
+			alert("체크박스선택하세요");
+			document.fr.ch[0].focus();
+			return false;
+		} 
+		*/
+		
+		var Allch = document.fr.ch;
+		var b=false;
+		
+		for(var i=0;i<Allch.length;i++){
+			//alert(i);
+			if(Allch[i].checked==true){
+				b=true;
+				break;
+			}
+		}
+		
+		if(!b){
+			alert("체크박스선택하세요");
+			Allch[0].focus();
+			return false;
+			
+		}
+		
+		//전송
+		document.fr.submit();
+	}
+	
+	function fun3() {
+		
+		
+		
+		//라디오버튼
+		var obj = document.fr.ra;
+		var b=false;
+		
+		for(var i=0;i<obj.length;i++){
+			//alert(i);
+			if(obj[i].checked==true){
+				b=true;
+				break;
+			}
+		}
+		
+		if(!b){
+			alert("라디오박스선택하세요");
+			obj[0].focus();
+			return false;
+			
+		}; 
+		
+		//체크박스
+		obj = document.fr.ch;
+		b=false;
+		
+		
+		for(var i=0;i<obj.length;i++){
+			//alert(i);
+			if(obj[i].checked==true){
+				b=true;
+				break;
+			};
+		};
+		
+		if(!b){
+			alert("체크박스선택하세요");
+			obj[0].focus();
+			return false;
+			
+		};
+		
+		
+		return true;
+	}
+	
+	
+	function fun99() {
+		
+		var name = document.fr.txtname.value;
+		var name2 = document.fr.txtname2.value;
+		//alert(name);
+		
+		//공백여부 확인
+		//IT 인지 확인
+		var mgs="";
+		
+		if(name!=""){
+			mgs="이름1 입력됨";
+		}
+		else if(name2==""){
+			mgs="이름2 입력해";
+		}
+		
+		
+		alert(mgs);
+		
+		/* 
+		if(name==""){
+			mgs="이름1 입력해";
+		}
+		if(name2==""){
+			mgs="이름1 입력해";
+		}
+		
+		 */
+		
+		
+		
+		
+		
+	}
+
+
+</script>
+</head>
+<body>
+<h1>webContent/js2/test8.html</h1>
+<form name="fr" action="a.jsp" method="get" onsubmit="return fun3();">
+
+
+둘중하나 선택 : <input type="radio" name="ra" value="1">첫번째 라디오
+<input type="radio" name="ra" value="2">두번째 라디오
+<input type="radio" name="ra" value="3">세번째 라디오<br>
+여러개 선택 : <input type="checkbox" name="ch" value="1">첫번째 체크박스
+<input type="checkbox" name="ch" value="2">두번째 체크박스
+<input type="checkbox" name="ch" value="3">세번째 체크박스
+
+<input type="button" value="라디오박스 속성" onclick="fun1();">
+<input type="button" value="박스 제어" onclick="fun2();">
+<input type="submit" value="submit로 박스제어">
+<br>
+이름 : <input type="text" id="txtname">
+이름2 : <input type="text" id="txtname2">
+<input type="button" value="체크" onclick="fun99();">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

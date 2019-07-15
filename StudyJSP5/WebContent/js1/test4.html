@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//인사말 메시지 출력
+	function fun1() {
+		alert("하이");
+	}
+	
+	//3개의 수를 받아서 합을 구해서 출력
+	function fun2(a, b, c) {
+		alert(a+b+c);
+	}
+	//2개의 점수를 받아서 평균 구한값을 리턴(함수호출한곳으로 되돌림)
+	function fun3(a, b) {
+		
+		return (a+b)/2;
+	}
+	
+	//2개의 점수를 받아서 평균 구한값을 리턴(함수호출한곳으로 되돌림)
+	function fun4(a, b) {
+		
+		return a+b;
+	}
+
+	
+	
+	
+	function fun5() {
+		
+		var a = document.getElementById("txt1").value;
+		var b = document.getElementById("txt2").value;
+		var c = document.getElementById("txt3").value;
+		
+		
+		
+		//var a = $('#txt1').val();
+		
+		var d = parseInt(a)+parseInt(b)+parseInt(c);
+		
+		alert(d);
+		
+	}
+</script>
+</head>
+<body>
+	<h1>WebContent/js1/test4.html</h1>
+	<input type="button" value="인사말출력" onclick="fun1();">
+	<input type="button" value="숫자합출력" onclick="fun2(10,20,30);">
+	
+	
+	<input type="button" value="평균구해서리턴" onclick="alert(fun3(85,90));">
+	
+	
+	<input type="button" value="합을 리턴 받아서 평균구해서리턴" onclick="alert(fun4(85,90)/2);">
+	
+	<br>
+	
+	<input type="text" id=txt1 size="3">
+	<input type="text" id=txt2 size="3">
+	<input type="text" id=txt3 size="3">
+	<input type="button" value="숫자합출력" onclick="fun5();">
+	
+	
+</body>
+</html>

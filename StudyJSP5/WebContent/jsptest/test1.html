@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ * - 필수입력사항 제어   
+ - 주민등록번호 앞자리는 6자 입력 제어   
+ - 주민등록번호 뒷자리는 7자 입력 제어   
+ - 회원 ID의 길이는 4 ~ 10로 제어   
+ - 비밀번호의 길이는 4 ~ 10자 제어   
+ - 비밀번호가 일치 제어   
+ - 중복확인 버튼 클릭 -> 경고메시지 출력(“중복확인완료”)   
+ - 우편번호 검색 창 열기(test2.html)   
+ - 아이콘 이미지 자유선택 (특수문자 * 가능)
+
+ */
+ 
+ 	function fun1() {
+	 	
+	 	var obj = document.fr;
+	 	//alert(obj.txtJo1.value.length);
+	 	
+		//이름
+		if(obj.txtName.value==""){
+			alert("이름입력");
+			return false;
+		}
+		//민증번호
+		if(obj.txtJo1.value==""){
+			alert("민증번호 입력하세요");
+			return false;
+		}
+		
+		if(obj.txtJo1.value.length!=6){
+			alert("민증번호 앞자리는 6자리가 되어야 합니다.")
+			return false;
+		}
+		
+		if(obj.txtJo2.value==""){
+			alert("민증번호 뒷부분을 입력하세요");
+			return false;
+		}
+			
+		if(obj.txtJo2.value.length!=7){
+			alert("민증번호 뒷자리는 7자리가 되어야 합니다.")
+			return false;
+		} 
+		//회원ID
+		if(obj.txtId.value==""){
+			alert("회원ID를 입력하세요");
+			return false;
+		}
+		
+		if(obj.txtId.value.length<4 || obj.txtId.value.length>10){
+			alert("회원ID 길이는 4~10자리.")
+			return false;
+		}
+		
+		//비밀번호
+		if(obj.txtPass.value==""){
+			alert("비밀번호를 입력하세요");
+			return false;
+		}
+		
+		if(obj.txtPass.value.length<4 || obj.txtPass.value.length>10){
+			alert("비밀번호를 길이는 4~10자리.")
+			return false;
+		}
+		
+		//비밀번호 확인
+		if(obj.txPassRe.value==""){
+			alert("비밀번호 확인를 입력하세요");
+			return false;
+		}
+		
+		if(obj.txPassRe.value.length<4 || obj.txPassRe.value.length>10){
+			alert("비밀번호를 길이는 4~10자리.")
+			return false;
+		}
+		
+		//전화번호
+	 	if(obj.txTel.value==""){
+			alert("전화번호를 입력하세요");
+			return false;
+		}
+	 	
+		
+	 	//회원분류
+	 	if(obj.ssl.selectedIndex==0){
+			alert("회원분류를 선택하세요");
+			return false;
+		}
+	 	
+	 	obj.submit();
+	};
+	
+	function fun2() {
+		alert("중복확인원료");
+	}
+	
+	function fun3(){
+		//window.open("test2.html","");
+		window.open("test2.html","주소검색","width=300,height=200");
+		
+	}
+	
+ 
+ 
+ 
+</script>
+</head>
+<body>
+<form action="a.jsp" name="fr" method="get">
+* 표시는 반드시 입력하셔야 합니다.
+<br>
+* 이름 <input type="text" id="txtName" name="txtName">
+<br>
+* 주민등록번호  <input type="text" id="txtJo1" size="6" name="txtJo1"> - <input type="text" id="txtJo2" size="6" name="txtJo2">
+<br>
+* 회원ID <input type="text" id="txtId" name="txtId"> <input type="button" value="중복확인" onclick="fun2();">
+<br>
+* 비밀번호 <input type="password" id="txtPass" name="txtPass">
+<br>
+* 비밀번호확인 <input type="password" id="txPassRe" name="txPassRe">
+<br>
+E-mail <input type="text" id="txtEmail" name="txtEmail">
+<br>
+* 전화번호 <input type="text" id="txTel" name="txTel">
+<br>
+핸드폰번호 <input type="text" id="txHp" name="txHp">
+<br>
+우편번호 <input type="text" id="txtAddrNo1" name="txtAddrNo1"> - <input type="text" id="txtAddrNo2" name="txtAddrNo2"> <input type="button" value="검색" onclick="fun3();">
+<br>
+<input type="text" id="txAddr1" name="txAddr1">
+<br> 
+상세주소 <input type="text" id="txAddr2" name="txAddr2">
+<br>
+* 회원분류 
+<select name="ssl">
+	<option value="">선택해 주세요</option>
+	<option value="1">학생</option>
+</select>
+<br>
+<input type="button" value="가입" onclick="fun1();">
+<input type="reset" value="취소">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+웹브라우저 내장객체
+window 
+	- location
+	- history
+	- document
+		- image, link, layer
+		- from
+			- text, password, textarea
+			- checkbox, radiobox
+			- select - option
+			
+	document : 웹브라우저에서 html head body 내장객체
+	document.속성
+		document.title, document.bgColor, document.fgColor, document.linkColor
+	document.메서드()
+		document.open(), document.close(), document.write(), document.writeln()
+		
+	window.document.forms[0].속성
+	window.document.forms[0].메서드()
+	window.document.forms[0].속성
+	
+	
+	
+	window.document.fr0.속성
+	window.document.fr[0].메서드()
+	window.document.fr[0].속성
+						
+*/
+	
+	function fun1() {
+		alert(document.fr0.action);
+		alert(document.fr0.method);
+		alert(document.fr0.name);
+		
+		//메서드
+		//document.forms[0].submit();
+		
+		document.fr0.reset();
+		
+	}
+	
+	function fun2() {
+		document.fr0.action = "a.jpg";
+		document.forms[0].method = "post"
+		//document.forms[0].
+		
+		alert(document.fr0.action);
+		alert(document.fr0.method);
+		
+		
+		document.fr0.submit();
+	}
+	
+	function fun3(i) {
+		
+		if(i=="1")
+			return false;
+		
+	}
+
+
+
+</script>
+</head>
+<body>
+<h1>webContent/js2/test6.html</h1>
+<form action="b.jsp" name="fr0" method="get" onsubmit="return fun3('1');">
+
+아이디 : <input type="text" name="id">
+<input type="button" value="버튼" onclick="fun1();">
+<input type="button" value="변경후전송" onclick="fun2();">
+<input type="submit" value="전송">
+<input type="reset" value="초기화"> 
+
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
